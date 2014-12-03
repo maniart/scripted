@@ -221,49 +221,138 @@
 					These styles are coming from the browser. Every browser has its default styles.
 				</section>
 
-				
-
-
 				<section>
-					<h4>AreYouThere? Under the hood : Client</h4>
-					<ul>
-						<li>socket this, socket that + some Canvas love</li>
-					</ul>
-<pre style="width:100%;"><code data-trim>
-socket.on('faceDetected', function(imageBuffer){
-  draw(imageBuffer);
-});
-			
-socket.on('closer', function() {				
-  updateText(function() {
-    var index = Math.ceil(Math.random() * sentences.interactive.closer.length-1);
-    return sentences.interactive.closer[index];	
-  });
-});
-
-socket.on('farther', function() {					
-  updateText(function() {
-  var index = Math.ceil(Math.random() * sentences.interactive.farther.length-1);
-    return sentences.interactive.farther[index];	
-  });
-});
-		
-socket.on('faceAdded', function(args) {
-  updateText(function() {
-    var index = Math.ceil(Math.random() * sentences.predefined.length-1);
-    return typeof sentences.predefined[index] === 'function' ? sentences.predefined[index](args) : sentences.predefined[index];	
-  });
-});
-
-socket.on('faceRemoved', function(args) {
-  updateText(function() {
-    var index = Math.ceil(Math.random() * sentences.predefined.length-1);
-    return typeof sentences.predefined[index] === 'function' ? sentences.predefined[index](args) : sentences.predefined[index];	
-  });
-});
-</code></pre>		
+					<h3>Enter Bootstrap!</h3>
+					Let's now insert bootstrap into our code above. Consider the following code:
+					<br>
+<pre><code data-trim>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"&gt;
+    &lt;title&gt;Hello world!&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button type="button" class="btn btn-default"&gt;Click me&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				</section>
+				
+				<section>
+					<h4>Results!</h4>
+					Click <a href="http://jsbin.com/vaguto/1/">Here</a> to see what this code looks like. 
+					<br>
+					Notice that the button looks different. 
+					<br>
+					Again, right click on the button and click on "Inspect element." It should look something like:
+					<br>
+					<a href="./assets/inspect-2.png" target="_blank">
+						<img style="max-height: 500px;" src="./assets/inspect-2.png">	
+					</a>
 				</section>
 
+				<section>
+					<h4>Notice that...</h4>
+					<ul>
+						<li>
+							The new styles being applied to the button.		
+						</li>
+						<li>
+							The styles are all coming from bootstrap.min.css which is the file we're bringing in using the &lt;link&gt; tag.	
+						</li>
+						<li>
+							By just including one file into our HTML file, we get hundreds of styles for free. Our button now looks better than the default version and we didn't even have to write any CSS to accomplish that.	
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h4>Text</h4>
+					Bootstrap has many styles for controlling the appearance of text. 
+					<br>
+					Go <a href="http://getbootstrap.com/css/#type" target="_blank">Here</a> for more details.
+				</section>
+
+				<section>
+					<h4>Bootstrap Grid system</h4>
+					Bootstrap offers a grid system that lets you arrange you content in columns and rows. Using this structure will also make your webpage viewable in different sizes such as on a smartphone.
+					<br>
+
+					Consider the following code:
+					<br>	
+<pre><code data-trim>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"&gt;
+    &lt;style type="text/css"&gt;
+      .col-md-1
+      {
+        background-color: red;
+        border: 1px solid;
+      }
+      .col-md-4
+      {
+        background-color: lightblue;
+        border: 1px solid;
+      }
+      .col-md-6
+      {
+        background-color: lightgreen;
+        border: 1px solid;
+      }
+      .col-md-8
+      {
+        background-color: pink;
+        border: 1px solid;
+      }      
+    &lt;/style&gt;
+    &lt;title&gt;Hello world!&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="container-fluid"&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+        &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+        &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+        &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+        &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+        &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+        &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+        &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+        &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+        &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+        &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+        &lt;div class="col-md-1"&gt;.col-md-1&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;br/&gt;&lt;br/&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-md-8"&gt;.col-md-8&lt;/div&gt;
+        &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;br/&lt;&lt;br/&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-md-4"&lt;.col-md-4&gt;/div&gt;
+        &lt;div class="col-md-4"&lt;.col-md-4&gt;/div&gt;
+        &lt;div class="col-md-4"&lt;.col-md-4&gt;/div&gt;
+      &lt;/div&gt;
+      &lt;br/&gt;&lt;br/&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="col-md-6"&gt;.col-md-6&lt;/div&gt;
+        &lt;div class="col-md-6"&gt;.col-md-6&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				<br>
+				Click <a href="http://jsbin.com/cureg/1/">Here</a> to see the produced page.
+				</section>
+
+
+
+Let's break this down. There are four rows total in this grid. In the first row, there are 12 columns each sized with 1 unit. In the second row, there are two columns sized 8 units and 4 units respectively. In the third row, there are three columns equally sized 4 units. Finally, in the last row, there are two columns each sized 8 units.
+
+These units specify the width of the column. Bootstrap allows for the total width of a row to add up to 12 units maxiumum.
 
 
 				
