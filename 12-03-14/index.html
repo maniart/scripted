@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Brooklyn.js - Make art happen with browser eyes and ears.</title>
+
+		<meta name="description" content="slides for Brooklyn.js Art+JS talk">
+		<meta name="author" content="Mani Nilchiani">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="./bower_components/reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="./bower_components/reveal.js/css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="./bower_components/reveal.js/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../bower_components/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				
+				<section>
+					<h3>Make art happen with browser eyes and ears.</h3>
+					<p>
+						<small><a target="_blank" href="http://maniartstudio.com">Mani Nilchiani</a> | <a target="_blank" href="http://twitter.com/mani_art">tw: @mani_art</a> | <a target="_blank" href="https://github.com/maniart/">gh: maniart</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h4>What I do</h4>
+					<img src="./assets/tdb-homepage.png">
+				</section>
+				
+				<section>
+					<h4>What I do Contd.</h4>
+					<img style="max-height: 600px;" src="./assets/tdb-cheatsheet.png">
+				</section>
+
+				<section>
+					<h4>What I do Contd. Contd.</h4>
+					<img style="max-height: 600px;" src="./assets/studio.png">
+				</section>
+
+				<section>
+					<h4>Meet my dad.</h4>
+					<img style="max-height: 600px;" src="./assets/dad.png">
+				</section>
+
+				<section>
+					<h4>Meet my dad Contd.</h4>
+					<blockquote>Son, you will grow up to be an engineer. <br> - dad.</blockquote>
+				</section>
+
+				<section>
+					<h4>I, on the other hand</h4>
+					<img style="max-height: 600px;" src="./assets/young-me.png">
+				</section>
+
+				<section>
+					<h4>Fast-forward to 2013</h4>
+					<img style="max-height: 600px;" src="./assets/biz-card.png">
+				</section>
+
+				<section>
+					<h4>Not a fan of "title"s</h4>
+					<ul>
+						<li>Titles are arbitrary</li>
+						<li>Tools are tools and you make what you want with them.</li>
+						<li>Artists are specially good at appropriating tools and their contemporary technology for creative expression.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h4>Proof? Old school awesome nerd artists.</h4>
+					<img style="max-height: 600px;" src="./assets/mohr.jpg">
+				</section>
+
+				<section>
+					<h4>Une Esthétique Programmée.</h4>
+					<img style="max-height: 600px;" src="./assets/que-pensez-vous.jpg">
+					<h6>Not super popular 46 years ago.</h6>
+				</section>
+
+				<section>
+					<h4>Nerd art acceptance has come a long way.</h4>
+					<img style="max-height: 600px;" src="./assets/mohr-exhibition.jpg">
+				</section>
+
+				<section>
+					<h4>And then this man happened to me.</h4>
+					<img style="max-height: 600px;" src="./assets/zach.jpeg">
+					<img style="max-height: 600px;" src="./assets/of.jpeg">
+					<p>...and to many many others.</p>
+				</section>
+
+				<section>
+					<h4>Artist creates a space for encounter and inquiry</h4>
+					<img style="max-height: 600px;" src="./assets/exhibition.jpg">
+				</section>
+
+				<section>
+					<h4>And digital artist mediates this encounter through zeros and ones.</h4>
+					<img style="max-height: 600px;" src="./assets/messa-di-voce.jpg">
+				</section>
+
+
+				<section>
+					<h4>Teh/YC - reliving recurring dreams I</h4>
+					<img style="max-height: 600px;" src="./assets/tehyc-1.jpg">
+				</section>
+
+				<section>
+					<h4>Teh/YC - reliving recurring dreams II</h4>
+					<img style="max-height: 600px;" src="./assets/tehyc-2.jpg">
+				</section>
+
+				<section>
+					<h4>Teh/YC - reliving recurring dreams III</h4>
+					<img style="max-height: 600px;" src="./assets/tehyc-3.jpg">
+				</section>
+
+				<section>
+					<h4>C++ is awesome, but</h4>
+					<h6>What if:</h6>
+					<ul>
+						<li>
+							We didn't have to compile
+						</li>
+						<li>
+							The artwork was portable
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h4>Enter:</h4>
+					<ul>
+						<li>
+							WebRTC
+						</li>
+						<li>
+							Canvas
+						</li>
+						<li>
+							JS
+						</li>
+						<li>
+							Ghetto Computer Vision (more on this soon.)
+						</li>
+					</ul>
+					<p>
+						<br>
+						Being web based should not dictate the mode of interaction:
+						<br>
+						Making it site-specific.
+					</p>
+				</section>
+
+				<section>
+					<h4>The Night</h4>
+					<img style="max-height: 600px;" src="./assets/thenight-1.jpg">
+				</section>
+
+				<section>
+					<h4>The Night Contd.</h4>
+					<iframe src="//player.vimeo.com/video/77043086" width="1068" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				</section>
+
+
+				<section>
+					<h4>The Night: Under the hood</h4>
+					<ul>
+						<li>A particle system</li>
+					</ul>
+
+<pre style="width:100%;"><code data-trim>
+// Particle constructor
+var Particle = function(args) {
+  this.x = Math.random() * W;
+  this.y = Math.random() * H;
+  this.vx = -1 + Math.random() * 2;
+  this.vy = -1 + Math.random() * 2;
+  this.radius = args.radius;
+};
+</code></pre>
+				</section>
+
+				<section>
+					<h4>The Night: Under the hood</h4>
+					<ul>
+						<li>A particle distance checker </li>
+					</ul>
+
+<pre style="width:100%;"><code data-trim>
+function distance(p1, p2) {
+	var dx = p1.x - p2.x,
+		dy = p1.y - p2.y;
+	dist = Math.sqrt(dx * dx + dy * dy);
+	if (dist <= args.minDist) {
+		canvasCtx.beginPath();
+		canvasCtx.strokeStyle = args.setColor();
+		canvasCtx.lineWidth = args.lineWidth;
+		canvasCtx.moveTo(p1.x, p1.y);
+		canvasCtx.lineTo(p2.x, p2.y);
+		canvasCtx.stroke();
+		
+		canvasCtx.closePath();
+		var ax = dx / (args.minDist * 1000),
+			ay = dy / (args.minDist * 1000);
+		p1.vx -= (args.minDist / Math.pow(100,.5)) * ax;
+		p1.vy -= (args.minDist / Math.pow(100,.5)) * ay;	
+		p2.vx += (args.minDist / Math.pow(100,.5)) * ax;
+		p2.vy += (args.minDist / Math.pow(100,.5)) * ay;
+	}	
+};
+</code></pre>
+				</section>
+
+				<section>
+					<h4>The Night: Under the hood</h4>
+					<ul>
+						<li>Quick diff-image utils for video input</li>
+					</ul>
+
+<pre style="width:100%;"><code data-trim>
+function fastAbs(value) {
+  return (value ^ (value >> 31)) - (value >> 31);
+};
+
+function threshold(value) {
+  return (value > 0x15) ? 0xFF : 0;
+};
+
+function differenceAccuracy(target, data1, data2) {
+  if (data1.length != data2.length) return null;
+  var i = 0;
+  while (i < (data1.length * 0.25)) {
+    var average1 = (data1[4*i] + data1[4*i+1] + data1[4*i+2]) / 2.5;
+    var average2 = (data2[4*i] + data2[4*i+1] + data2[4*i+2]) / 2.5;
+    var diff = threshold(fastAbs(average1 - average2));
+    target[4*i] = diff;
+    target[4*i+1] = diff;
+    target[4*i+2] = diff;
+    target[4*i+3] = 0xFF;
+    ++i;
+  }
+};	
+</code></pre>
+				</section>
+
+				<section>
+					<h4>The Night: Under the hood</h4>
+					<ul>
+						<li>Blending two frames and get the diff</li>
+					</ul>
+
+<pre style="width:100%;"><code data-trim>
+function blend() {
+  var width = DOM.normalImage.width,
+    height = DOM.normalImage.height,
+    sourceData = normalImageCtx.getImageData(0, 0, width, height);
+	
+  if (!lastImageData) lastImageData = normalImageCtx.getImageData(0, 0, width, height);
+  var blendedData = normalImageCtx.createImageData(width, height);
+  differenceAccuracy(blendedData.data, sourceData.data, lastImageData.data);
+  diffImageCtx.putImageData(blendedData, 0, 0);
+  lastImageData = sourceData;
+};
+</code></pre>
+				</section>
+
+				<section>
+					<h4>The Night: Under the hood</h4>
+					<ul>
+						<li>Check screen area and figure out where the motion is.</li>
+					</ul>
+
+<pre style="width:100%;"><code data-trim>
+function checkAreas() {
+  for (var r=1; r<6; ++r) {
+  var blendedData = diffImageCtx.getImageData(1/7*r*webcam.width, 1/8*3*webcam.height, webcam.width/8, 1/7*webcam.height);
+  var i = 0;
+  var average = 0;
+  while (i < (blendedData.data.length * 0.25)) {
+    average += (blendedData.data[i*4] + blendedData.data[i*4+1] + blendedData.data[i*4+2]) / 3;
+    ++i;
+  }
+  average = Math.round(average / (blendedData.data.length * 0.25));
+  if (average > 10) {
+    switch(r) {
+      case 1:
+        shab.isHit = true;
+        break;
+      case 2:
+        zibast.isHit = true;
+        break;
+      case 3: 
+        bihodeh.isHit = true;
+        break;
+      case 4:
+        ke.isHit = true;
+        break;
+      case 5:
+        agar.isHit = true;
+        break;				
+      }
+	} else {
+    switch(r) {
+      case 1:
+        shab.isHit = false;
+        break;
+      case 2:
+        zibast.isHit = false;
+        break;
+      case 3: 
+        bihodeh.isHit = false;
+        break;
+      case 4:
+        ke.isHit = false;
+        break;
+      case 5:
+        agar.isHit = false;
+		break;				
+      }
+  }
+}
+</code></pre>
+				</section>
+
+				<section>
+					<h4>The Night: Under the hood</h4>
+					<ul>
+						<li>Draw!</li>
+					</ul>
+
+<pre style="width:100%;"><code data-trim>
+
+function draw() {
+  clear();
+  for (var i = particles.length - 1; i >= 0; i --) {
+    particles[i].draw();
+    //canvasCtx.drawImage(images.agar, particles[0].x, particles[0].y, 25, 21);
+    //canvasCtx.drawImage(images.ke, particles[1].x, particles[1].y, 39, 29);
+    //canvasCtx.drawImage(images.bihodeh, particles[2].x, particles[2].y, 64, 41);
+    //canvasCtx.drawImage(images.shab, particles[4].x, particles[4].y, 61, 35);
+  };
+  update();
+  /* hack: drawing words in html for exhibition shhhhhhh! */
+  //canvasCtx.drawImage(images.agar, 1/7*5*DOM.canvas.width, 1/8*3*DOM.canvas.height, 51, 43);
+  //canvasCtx.drawImage(images.ke, 1/7*4*DOM.canvas.width, 1/8*3*DOM.canvas.height, 40, 29);
+  //canvasCtx.drawImage(images.bihodeh, 1/7*3*DOM.canvas.width, 1/8*3*DOM.canvas.height, 97, 38);
+  //canvasCtx.drawImage(images.zibast, 1/7*2*DOM.canvas.width, 1/8*3*DOM.canvas.height, 103, 41);	
+  //canvasCtx.drawImage(images.shab, 1/7*1*DOM.canvas.width, 1/8*3*DOM.canvas.height, 64, 41);	
+}
+</code></pre>
+				</section>
+
+				<section>
+					<h4>AreYouThere?</h4>
+					<p>
+						Are works of art lifeless objects?
+					</p>
+					<img style="max-height: 600px;" src="./assets/areyouthere-1.jpg">
+
+
+				</section>
+
+				<section>
+					<h4>AreYouThere?</h4>
+					<p>
+						... Or do they gaze back at us?
+					</p>
+					<iframe src="//player.vimeo.com/video/112430862" width="604" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+				</section>
+
+				<section>
+					<h4>AreYouThere? Under the hood</h4>
+					<ul>
+						<li>"Actual" OpenCV (Thank heavens for node.js binding)</li>
+						<li>socket.io</li>
+					</ul>
+				</section>
+
+				<section>
+					<h4>AreYouThere? Under the hood</h4>
+					<p>Lesson learned: Framing an LCD is mad fun.</p>
+					<img style="max-height: 600px;" src="./assets/digital-art-101.png">
+				</section>
+
+				<section>
+					<h4>AreYouThere? Under the hood</h4>
+					<p>Lesson learned: Framing an LCD is mad fun.</p>
+					<img style="max-height: 600px;" src="./assets/digital-art-101-2.png">
+				</section>
+
+				<section>
+					<h4>AreYouThere? Under the hood : Server</h4>
+					<ul>
+						<li>base64 FTW</li>
+					</ul>
+<pre style="width:100%;"><code data-trim>
+decodeBase64Image = function(dataString) {
+  var matches = dataString.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/),
+    response = {};
+  if (matches.length !== 3) {
+    throw new Error('Invalid input string');
+  }
+
+  response.type = matches[1];
+  response.data = new Buffer(matches[2], 'base64');
+  return response;
+};
+</code></pre>		
+				</section>
+
+				<section>
+					<h4>AreYouThere? Under the hood : Server</h4>
+					<ul>
+						<li>Call me back with faces.</li>
+					</ul>
+<pre style="width:100%;"><code data-trim>
+var cv = require('opencv');
+cv.readImage(imageBuffer.data, function(err, im){
+  if(err) throw err;
+  im.detectObject(cv.FACE_CASCADE, {}, function(err, faces){
+    /* OMG! Faces! */
+  });
+});
+</code></pre>		
+				</section>
+
+				<section>
+					<h4>AreYouThere? Under the hood : Server</h4>
+					<ul>
+						<li>socket.io</li>
+					</ul>
+<pre style="width:100%;"><code data-trim>
+io.on('connection', function(socket) {
+  socket.on('image', function(data){	    
+    imageBuffer = decodeBase64Image(data);
+  });
+  socket.volatile.emit('faceDetected', faces);
+  socket.broadcast.volatile.emit('faceDetected', faces);
+  socket.volatile.emit('faceAdded', [faceCount, totalFaceCount]);
+  socket.broadcast.volatile.emit('faceAdded', faceCount);	
+  socket.volatile.emit('faceRemoved', [faceCount, totalFaceCount]);
+  socket.broadcast.volatile.emit('faceRemoved', [faceCount, totalFaceCount]);
+});
+</code></pre>		
+				</section>
+
+				<section>
+					<h4>AreYouThere? Under the hood : Client</h4>
+					<ul>
+						<li>socket this, socket that + some Canvas love</li>
+					</ul>
+<pre style="width:100%;"><code data-trim>
+socket.on('faceDetected', function(imageBuffer){
+  draw(imageBuffer);
+});
+			
+socket.on('closer', function() {				
+  updateText(function() {
+    var index = Math.ceil(Math.random() * sentences.interactive.closer.length-1);
+    return sentences.interactive.closer[index];	
+  });
+});
+
+socket.on('farther', function() {					
+  updateText(function() {
+  var index = Math.ceil(Math.random() * sentences.interactive.farther.length-1);
+    return sentences.interactive.farther[index];	
+  });
+});
+		
+socket.on('faceAdded', function(args) {
+  updateText(function() {
+    var index = Math.ceil(Math.random() * sentences.predefined.length-1);
+    return typeof sentences.predefined[index] === 'function' ? sentences.predefined[index](args) : sentences.predefined[index];	
+  });
+});
+
+socket.on('faceRemoved', function(args) {
+  updateText(function() {
+    var index = Math.ceil(Math.random() * sentences.predefined.length-1);
+    return typeof sentences.predefined[index] === 'function' ? sentences.predefined[index](args) : sentences.predefined[index];	
+  });
+});
+</code></pre>		
+				</section>
+
+				<section>
+					<h4>One last thing.</h4>
+					<p>Shout out to this rad fellow.</p>
+					<img style="max-height: 600px;" src="./assets/kawan.jpg">
+				</section>
+
+				<section>
+					<h4>_.each(yall, function(you) { you.thank({ value : 'much' }); });</h4>
+					<small><a target="_blank" href="http://maniartstudio.com">Mani Nilchiani</a> | <a target="_blank" href="http://twitter.com/mani_art">tw: @mani_art</a> | <a target="_blank" href="https://github.com/maniart/">gh: maniart</a></small>
+					<br>
+					<small>November 2014, Bklyn, NY</small>
+				</section>
+
+				
+			</div>
+
+		</div>
+
+		<script src="./bower_components/reveal.js/lib/js/head.min.js"></script>
+		<script src="./bower_components/reveal.js/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+				theme: Reveal.getQueryHash().theme || 'night', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: './bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: './bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: './bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: './bower_components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
