@@ -45,13 +45,184 @@
 				</section>
 
 				<section>
-					<h3>Bootstrap</h3>
-					<p>
-						<small>What / Why / How</small>
-					</p>
+					<h3>Why</h3>
+					<ul>
+						<li>
+							bootstrap lets us create simple and clean looking web pages without spending a lot of time.
+						</li>
+						<li>
+							It connects to what we've previously learned because we will able to use CSS classes written by others to style our pages.
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Refresher</h3>
+					<ul>
+						<li>
+							What's CSS? 
+						</li>
+						<li>
+							How is it different than HTML? 
+						</li>
+						<li>
+							What's a CSS class? 
+						</li>
+						<li>
+							How about ID? 
+						</li>
+						<li>
+							When do we use one versus the other?
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>What</h3>
+					Twitter bootstrap is:
+					<br>
+					<ul>
+						<li>
+							A CSS and JavaScript
+							<br>
+							<small>What is a "library?"</small>
+						</li>
+						<li>
+							It is written by former Twitter employees.
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Library</h3>
+					A Library is:
+					<br>
+					<ul>
+						<li>
+							Body of code
+						</li>
+						<li>
+							Others have written
+							<br>
+							<small>You can too!</small>	
+						</li>
+						<li>
+							Makes our lives easier.
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Bootstrap helps us...</h3>
+					<ul>
+						<li>
+							Code faster.
+						</li>
+						<li>
+							Build faster.	
+						</li>
+						<li>
+							Rather than writing our own CSS which takes time, we can use Bootstrap's styles in our HTML pages.
+						</li>
+						<li>
+							For this unit, we will only look at the CSS aspects of Bootstrap.
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Installation</h3>
+					Let's bring it to our project:
+					<br>
+					Using these tags:
+<pre><code data-trim>
+&lt;head&gt;
+  &lt;link&gt;
+&lt;/head&gt;
+</code></pre>					
+				<br>
+					Rather than writing our own CSS which takes time, we can use Bootstrap's styles in our HTML pages.
+				</section>
+
+
+				<section>
+					<h3>Let's Do It!</h3>
+					<br>
+<pre><code data-trim>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"&gt;
+    &lt;title&gt;My first bootstrap page!&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    Hello world!
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>					
+				
+				</section>
+
+				<section>
+					<h3>Linking to the library</h3>
+					Note the link where the Bootstrap CSS file is located. 
+					<br>
+					Another website is hosting this file for us. 
+					<br>
+					This is convenient because :
+					<ul>
+						<li>
+							we don't have to download the file and store it in our own project.
+						</li>
+					</ul>				
+				</section>
+
+				<section>
+					<h3>Deep Dive</h3>
+					<br>
+					Let's take a look at a single element before the inclusion of Bootstrap and afterwards. Consider the following code:
+					<br>
+<pre><code data-trim>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello world!&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button type="button" class="btn btn-default"&gt;Click me&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				<br>
+				Click <a href="http://jsbin.com/quxeg/1/">Here</a> to see what it looks like
+				</section>
+
+				<section>
+					<h3>A Closer Look</h3>
+					Using the Chrome browser, right click on the button and click on "Inspect element". Look at the right side of the new screen. It should look something like:
+					<br>
+					<a href="./assets/inspect-1.png" target="_blank">
+						<img style="max-height: 500px;" src="./assets/inspect-1.png">	
+					</a>
+				</section>
+
+				<section>
+					<h3>What did we just look at?</h3>
+					These are all the styles being applied to that button. 
+				</section>
+
+				<section>
+					<h3>But wait...</h3>
+					We don't have a CSS file in our project. 
+					<br>
+					We haven't written any styles for our button so where are these styles coming from?
+				</section>
+
+				<section>
+					<h3>Well...</h3>
+					These styles are coming from the browser. Every browser has its default styles.
 				</section>
 
 				
+
 
 				<section>
 					<h4>AreYouThere? Under the hood : Client</h4>
