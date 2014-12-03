@@ -1,4 +1,4 @@
-brooklyn.js-slides
+ScriptEd Slides
 ==================
 
-Slides for Brooklyn.JS ART+JS anniversary talk
+Slides for ScriptEd program @ High School for Global Citizenship - Brooklyn, NY
