@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>ScriptEd - HSGC 12.03.14 - Bootstrap</title>
+
+		<meta name="description" content="slides for Brooklyn.js Art+JS talk">
+		<meta name="author" content="Mani Nilchiani">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../bower_components/reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="../bower_components/reveal.js/css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../bower_components/reveal.js/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../bower_components/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				
+				<section>
+					<h1>JavaScript 101</h1>	
+					<h4>HSGC - ScriptEd</h4>
+					<h5>Jan 2015</h5>
+				</section>
+
+				<section>
+					<h3>We use JavaScript to...</h3>
+				</section>
+
+				<section>
+					<h3>Write programs that run in the browser .... and beyond.</h3>
+				</section>
+
+				<section>
+					<h3>How does JavaScript tie in with HTML and CSS?</h3>
+				</section>	
+
+				<section>
+					<h3>It interacts with Markup and Style to create rich experiences in the browser ... and so much more!</h3>
+				</section>
+
+				<section>
+					<h3>It allows us to run full-featured applications that run in the browser.</h3>
+					<h6>Just take a quick glance at your "Gmail" inbox.</h6>
+					<h6>All these features (send, receive, tag, draft, contacts, etc.) are written in JavaScrtipt.</h6>
+				</section>	
+
+				<section>
+					<h3>In a nutshell...</h3>
+					<h6>Sky is the limit.</h6>
+				</section>	
+
+				<section>
+					<h3>It all starts with a Box.</h3>
+					<img src="./assets/box.jpg" style="max-height: 500px;">
+				</section>
+
+
+				<section>
+					<h3>What?</h3>
+				</section>
+
+				<section>
+					<h3>Yep.</h3>
+					<p>Programming is a set of instructions that we ask the computer to run.</p>
+				</section>	
+
+				<section>
+					<p>In the computer's brain, you want to keep track of the building blocks of your program.</p>
+					<p>And to do that, we put each building block in a box. And later, we use it to do cool things.</p>
+				</section>
+
+				<section>
+					<h3>Remember:</h3>
+					<ul>
+						<li>You can put anything in a box</li>
+						<li>And you can later take it out and use it</li>
+						<li>Or, you can take it out, change it and put it back.</li>
+						<li>Every box has a unique name.</li>
+						<li>Every `thing` we put in a box has a `type`</li>
+						<li>Don't forget the `;` - in JavaScript land, `;` is the equivalent of full top `.`</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Enough with the box talk. Cut to the chase.</h3>
+					<h5>Fair enoguh.</h5>
+<pre><code data-trim>
+var singer = 'Justin Timberlake';
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Wait, what?</h3>
+					<p>OK. Try to guess:</p>
+					<ul>
+						<li>The Box name.</li>
+						<li>The thing inside the box.</li>
+						<li>What does `var` stand for?</li>
+					</ul>
+<pre><code data-trim>
+var singer = 'Justin Timberlake';
+</code></pre>
+				</section>
+
+				<section>
+					<h3>We made a Variable!</h3>
+					<p>Not too bad!</p>
+					<ul>
+						<li>The Box name: `singer`</li>
+						<li>The thing inside the box: `Justin Timberlake`</li>
+						<li>What does `var` stand for?: `variable`</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>So to make a new `var`</h3>
+					<p>... or a new `box` as we put it earlier.</p>
+					<ul>
+						<li>We use the keyword `var`</li>
+						<li>Followed by the name of the `var` (here, it was `singer`)</li>
+						<li>Followed by an equal sign.</li>
+						<li>Followed by the thing in the box! (here, it was `Justin Timberlake`)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Now help me make some variables.</h3>
+					<p>... It could be anything at all!</p>
+					<p>hint: It doesn't need to be name of people. Anything goes. Try numbers.</p>
+				</section>
+
+				<section>
+					<h3>Fantastic.</h3>
+					<p>... Now a tiny bit of vocabulary:</p>
+					<ul>
+						<li>When you create a new `var` (make a new box) it is called `Declaring a new variable`</li>
+						<li>When you assign a value to it (put something in the box) you are `instantiating` the variable.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Print variables!</h3>
+					<p>Once you create a variable, JavaScript will keep that variable in memory.</p>
+					<p>Now, you can do all sorts of things with it.</p>
+					<p>Let's start with printing on the screen:</p>
+				</section>
+
+				<section>
+					<h3>Print variables!</h3>
+					<p>Once you create a variable, JavaScript will keep that variable in memory.</p>
+					<p>Now, you can do all sorts of things with it.</p>
+					<p>Let's start with printing on the screen:</p>
+<pre><code data-trim>
+var season = 'winter';
+console.log(season);
+// winter
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Arithmetic Operations</h3>
+					<p>+ - / *</p>
+<pre><code data-trim>
+var wheels = 4;
+console.log(wheels);
+wheels = wheels - 2;
+console.log(wheels);
+</code></pre>
+
+<pre><code data-trim>
+var age = 14;
+console.log(age);
+age = age * 2;
+console.log(age);
+</code></pre>
+
+<pre><code data-trim>
+var candy = 12;
+console.log(candy);
+candy = candy / 2;
+console.log(candy);
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Order of operations</h3>
+					<p>PEMDAS</p>
+					<ol>
+						<li>Parenthesis</li>
+						<li>Exponent</li>
+						<li>Multiplication</li>
+						<li>Division</li>
+						<li>Addition</li>
+						<li>Subtraction</li>
+					</ol>
+					<p>These are the same order of operations you follow in math class</p>
+				</section>
+
+				<section>
+					<h3>Now help me figure this out:</h3>
+<pre><code data-trim>
+var number = (12 * 2) / 4 * 5 - 2 + 1;
+console.log(number);
+</code></pre>
+				</section>
+
+				<section>
+					<h3>29!</h3>
+				</section>
+
+				<section>
+					<h3>More Arithmetic Fun!</h3>
+					<p>Increment / Decrement</p>
+					<p>Say you just grew one year older. How do we take your age and add 1 to it?</p>
+<pre><code data-trim>
+var yesterdayAge = 16;
+var todayAge = yesterdayAge + 1;
+console.log(todayAge);
+</code></pre>
+				</section>
+
+				<section>
+					<h3>In short form ...</h3>
+<pre><code data-trim>
+// notice the `++`
+var yesterdayAge = 16;
+var todayAge = yesterdayAge ++;
+console.log(todayAge);
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Types!</h3>
+					<p>In JavaScript land, `variable`s have `types`. To get the type of a variable, we can use this:</p>
+<pre><code data-trim>
+typeof(variableName);
+</code></pre>
+<pre><code data-trim>
+// example:
+var number = (12 * 2) / 4 * 5 - 2 + 1;
+console.log(typeof(number));
+</code></pre>					
+				</section>
+
+				<section>
+					<h3>Remember!</h3>
+					<p>In programming, any written word or text is considered of the `String` type.</p>
+
+<pre><code data-trim>
+var name = "Orandy";
+// name is of type String - because it is a word.
+</code></pre>
+					<p>To mark a variable as string, we should wrap its value in `'` or `"` (single or double quotation mark). </p>					
+				</section>
+
+				<section>
+					<h3>Bonus Question!</h3>
+					<p>Are the two following variables the same?</p>
+
+<pre><code data-trim>
+var me = "18";
+var you = 17;
+</code></pre>				
+				</section>
+
+				<section>
+					<h3>That's it!</h3>
+				</section>
+
+
+
+
+
+				
+			</div>
+
+		</div>
+
+		<script src="../bower_components/reveal.js/lib/js/head.min.js"></script>
+		<script src="../bower_components/reveal.js/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+				theme: Reveal.getQueryHash().theme || 'night', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../bower_components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
