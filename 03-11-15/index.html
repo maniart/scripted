@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>ScriptEd - HSGC 03.11.14 - Strings</title>
+
+		<meta name="description" content="slides for Brooklyn.js Art+JS talk">
+		<meta name="author" content="Mani Nilchiani">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../bower_components/reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="../bower_components/reveal.js/css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../bower_components/reveal.js/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../bower_components/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				
+				<section>
+					<h3>var lesson = "Strings";</h3>
+					<p>
+						<small>03.11.2015</small>
+					</p>
+				</section>
+
+				<section>
+					<h3>What are Strings?</h3>
+				</section>
+
+				<section>
+					<h3>How do we make Strings?</h3>
+				</section>
+
+				<section>
+<pre><code data-trim>
+var buzz = "To infinity, and beyond!";
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Single quote or Double quote, both work.</h3>
+				</section>
+
+				<section>
+					<h3>Key Points</h3>
+					<ul>
+						<li>
+							Strings are made up of multiple characters. A set of characters "strung" together make a string.
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Key Points</h3>
+					<ul>
+						<li>
+							Existing functions can be used to manipulate strings.
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Key Points</h3>
+					<ul>
+						<li>
+							The first index of a string is 0. The last index is length-1.
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Key Points</h3>
+					<ul>
+						<li>
+							Strings can be cast to a number and vice versa.
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Key Points</h3>
+					<ul>
+						<li>
+							Strings can be compared to one another.
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Storing a String in a variable and printing it.</h3>
+				</section>
+
+				<section>
+<pre><code data-trim>
+var buzz = "To infinity, and beyond!";
+console.log(buzz); // prints "To infinity, and beyond!"
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Great. Now, what do you think the following code does?</h3>
+				</section>
+
+				<section>
+<pre><code data-trim>
+console.log(buzz.length); 
+</code></pre>
+				</section>
+
+				<section>
+<pre><code data-trim>
+console.log(buzz.length); // prints 24 - the number of characters in the string
+</code></pre>
+				</section>
+
+				<section>
+					<h3>very important, yet simple thing about computers and counting.</h3>
+					<p>Computers start counting from 0. not 1.</p>
+				</section>
+
+				<section>
+					<h3>Now, what if we want to print only the "first" character in our string?</h3>
+					<p>Remember that computers start counting from 0. not 1.</p>
+				</section>
+
+				<section>
+<pre><code data-trim>
+console.log(buzz.charAt(0)); // prints 'T'
+</code></pre>
+				</section>
+
+				<section>
+					<h3>`charAt` function</h3>
+					<p>Pass an index, get a character!</p>
+					<p>Let's do some more of this.</p>
+				</section>
+
+				<section>
+					<h3>Let's get the 9th character on our `buzz` string</h3>
+				</section>
+
+				<section>
+<pre><code data-trim>
+console.log(buzz.charAt(9)); // prints 't'
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Let's print the last character on the `buzz` string</h3>
+				</section>
+
+				<section>
+<pre><code data-trim>
+console.log(buzz.charAt(buzz.length-1)); // prints '!'
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Now let's reverse the question: What if I want to know the index of a given character?</h3>
+				</section>
+
+				<section>
+<pre><code data-trim>
+var index = buzz.indexOf('i'); 
+console.log(index); // prints 3
+</code></pre>
+				</section>
+				
+				<section>
+					<h3>Great, now let's try another character.</h3>
+				</section>
+
+				<section>
+<pre><code data-trim>
+var index = buzz.indexOf('o'); 
+</code></pre>
+				</section>
+
+				<section>
+					<h3>But what if there's more than one instance of a character in our string?</h3>
+					<p>For example, in our `buzz` string, we have two instances of the letter `i`</p>
+				</section>
+
+				<section>
+					
+<pre><code data-trim>
+var index = buzz.lastIndexOf('i'); 
+console.log(index); // prints 8
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Coding time!</h3>
+					<p><a href="http://jsbin.com/huriyof/1/edit">http://jsbin.com/huriyof/1/edit</a></p>
+				</section>
+
+				<section>
+					<h3>Let's split a string.</h3>
+					<p>Suppose we have a string that contains a sentence with two words. Suppose we want to split the sentence into two parts.</p>
+				</section>
+
+				<section>
+<pre><code data-trim>
+var rex = "I roar!";
+console.log(rex.slice(0,1));
+console.log(rex.slice(2,6));
+</code></pre>
+				</section>
+
+				<section>
+					<p>`slice` is a function that takes two parameters: a starting index and an ending index. The function then extracts the mini-string inside the original based on the two indices. This resulting string is called a `sub-string.`</p>
+				</section>
+
+				<section>
+					<h3>Upper case &amp; lower case</h3>
+					<p>Suppose we have a string and want to make it all upper case. We can:</p>
+<pre><code data-trim>
+var potatoHead = "Hey, a laser! How come you don't have a laser, Woody?";
+var angryPotatoHead = potatoHead.toUpperCase();
+console.log(angryPotatoHead); 
+// prints "HEY, A LASER! HOW COME YOU DON'T HAVE A LASER, WOODY?"
+</code></pre>
+				</section>
+
+				<section>
+					<h3>How to convert a string to lower case?</h3>
+					<p>If we can haz `toUpperCase`, we can haz ...<p>
+				</section>
+
+				<section>
+<pre><code data-trim>
+var nicePotatoHead = angryPotatoHead.toLowerCase();
+console.log(nicePotatoHead);
+// prints "hey, a laser! how come you don't have a laser, woody?"
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Suppose we want to replace a word in a string. We can:</h3>
+				</section>
+
+				<section>
+<pre><code data-trim>
+var dory = "Hey, look! Sharks!";
+var otherDory = dory.replace("Sharks", "Turtles");
+console.log(otherDory);
+// prints "Hey, look! Turtles!"
+</code></pre>
+				</section>
+
+				<section>
+					<p>
+						The `replace()` function takes in two parameters: a string to replace and the string to replace with. It searches in the original string for the first parameter. It then replaces it with the second parameter. The above prints Hey, look! Turtles!.
+					</p>
+				</section>
+
+				<section>
+					<h3>Concatenate!</h3>
+					<p>Suppose you want to join two strings together. We can:</p>
+				</section>
+
+
+				<section>
+<pre><code data-trim>
+var marlinOne = "No, no more whale!";
+var marlinTwo = "You can't speak whale!";
+var marlinJoined = marlinOne.concat(marlinTwo);
+console.log(marlinJoined);
+// prints "No, no more whale!You can't speak whale!"
+</code></pre>
+				</section>
+
+				<section>
+					<p>The concat function takes in one parameter: the string that is to be added to the end of the original string. It returns a joined or concatenated string.</p>
+				</section>
+
+				<section>
+					<p>You can also simply use the `+` operator to concatenate strings</p>
+<pre><code data-trim>
+var marlinOne = "No, no more whale!";
+var marlinTwo = "You can't speak whale!";
+var marlinJoined = marlinOne + marlinTwo;
+console.log(marlinJoined);
+// prints "No, no more whale!You can't speak whale!"
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Trim</h3>
+					<p>The invisible character that gets created when you tap the space bar on your keyboard is called whitespace. Consider the following string:</p>
+<pre><code data-trim>
+var dory = "Your son Chico?";
+</code></pre>
+				</section>
+
+				<section>
+					<p>Sometimes strings have unnecessary whitespaces at the end of them like so:</p>
+<pre><code data-trim>
+var marlin = "Nemo   ";
+</code></pre>
+				<p>let's print the length of `marlin`.</p>
+				</section>
+
+				<section>
+					<p>Now, let's get rid of the extra whitespace</p>
+<pre><code data-trim>
+var cleanMarlin = marlin.trim();
+console.log(cleanMarlin.length);
+</code></pre>
+				</section>
+
+				<section>
+					<p>`trim()` is a function that removes whitespace both at the beginning and end of the string it is operating on. The above will print 4 to the console.</p>
+				</section>
+
+				<section>
+					<h3>Cast</h3>
+					<p>Suppose the following:</p>
+<pre><code data-trim>
+var x = 42;
+x.concat(" is the best number ever!");
+</code></pre>
+				</section>
+
+				<section>
+					<h3>Why did we fail?</h3>
+				</section>
+
+				<section>
+					<p>Because `x` is of the type `Number`. We can't `concat` a `Number` to a `String.</p>
+					<p>Unless...</p>	
+				</section>
+
+				<section>
+<pre><code data-trim>
+var xString = parseInt(x);
+var newString = xString.concat(" is the best number ever!");
+console.log(newString);
+</code></pre>			
+				</section>
+
+				<section>
+					<p>`parseInt()` is a function that takes in one parameter: an integer. It returns the string form of the integer.</p>
+				</section>
+
+				<section>
+					<h3>Comparison</h3>
+					<p>To compare two strings, we can use the === operator:</p>
+<pre><code data-trim>
+var w = "Hello";
+var x = "Hello";
+var y = "hello";
+var z = "hello  ";
+
+console.log(w==x);
+console.log(w==y);
+console.log(y==z);
+console.log(y==z.trim());
+
+// prints:
+/* 
+	true
+	false
+	false
+	true
+*/
+</code></pre>
+				</section>
+				
+				<section>
+					<h3>Let's code together!</h3>
+					<p><a href="http://jsbin.com/zoleye/1/edit">http://jsbin.com/zoleye/1/edit</a></p>
+				</section>
+
+				<section>
+					<h3>Now you code!</h3>
+					<p><a href="http://jsbin.com/ruvuno/3/edit">http://jsbin.com/ruvuno/3/edit</a></p>
+				</section>
+			
+
+			</div>
+
+
+
+		</div>
+
+		<script src="../bower_components/reveal.js/lib/js/head.min.js"></script>
+		<script src="../bower_components/reveal.js/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+				theme: Reveal.getQueryHash().theme || 'night', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../bower_components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
